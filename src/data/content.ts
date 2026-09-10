@@ -12,6 +12,7 @@ export const personal = {
 export const navLinks = [
   { label: "Impact", href: "#impact" },
   { label: "Capabilities", href: "#capabilities" },
+  { label: "Case Studies", href: "#case-studies" },
   { label: "Experience", href: "#experience" },
   { label: "Approach", href: "#approach" },
   { label: "Contact", href: "#contact" },
@@ -129,6 +130,105 @@ export const caseStudies = [
     result:
       "₹5Cr+ (~$600K) in renewal, retention and cross-sell/upsell revenue; repeat customer conversions up 30.5% year over year.",
     tags: ["Lifecycle Marketing", "Automation", "CRM", "Retention"],
+  },
+];
+
+export type CaseStudyDownload = {
+  title: string;
+  description: string;
+  pdfUrl: string;
+};
+
+export const caseStudyLibrary: CaseStudyDownload[] = [
+  {
+    title: "Enterprise ABM for a Global Supply Chain Consultancy",
+    description:
+      "Built a 47-account enterprise ABM motion for a global supply chain consultancy, converting 20% of targeted C-suite contacts into meetings.",
+    pdfUrl: "/case-study-01-enterprise-abm-supply-chain.pdf",
+  },
+  {
+    title: "Integrated Paid Demand Generation for a Global Supply Chain Consultancy",
+    description:
+      "Connected paid media with content, events, SEO and sales follow-up into one demand engine, contributing to $55M+ in sales-qualified pipeline.",
+    pdfUrl: "/case-study-02-paid-demand-generation-supply-chain.pdf",
+  },
+  {
+    title: "Website and Conversion Optimisation for a Global Supply Chain Consultancy",
+    description:
+      "Rebuilt the website's conversion path to connect market narrative, SEO and demand capture, supporting a 45% increase in brand visibility.",
+    pdfUrl: "/case-study-03-website-conversion-optimisation.pdf",
+  },
+  {
+    title: "SEO and Thought Leadership for a Global Supply Chain Consultancy",
+    description:
+      "Turned subject-matter expertise into an SEO and thought-leadership system, lifting brand visibility 45% through AI-enabled content operations.",
+    pdfUrl: "/case-study-04-seo-thought-leadership.pdf",
+  },
+  {
+    title: "Scaling Paid Acquisition for a Global Technology Company",
+    description:
+      "Managed a $4.79M three-year paid and outbound budget, scaling acquisition from $0 to $12M at 2.1x ROAS with a sub-18-month payback.",
+    pdfUrl: "/case-study-05-scaling-paid-acquisition.pdf",
+  },
+  {
+    title: "Reducing CAC by 25% for a Global Technology Company",
+    description:
+      "Combined channel mix, buyer-journey analysis and landing-page testing to cut customer acquisition cost 25%, from $340 to $255.",
+    pdfUrl: "/case-study-06-reducing-cac-25-percent.pdf",
+  },
+  {
+    title: "Global Marketing Operating Model for a Cloud Solutions Provider",
+    description:
+      "Scaled an international marketing team from 8 to 20 across India, the US and the UK, building the operating model behind a global cloud portfolio.",
+    pdfUrl: "/case-study-07-global-marketing-operating-model.pdf",
+  },
+  {
+    title: "Lifecycle and Digital Revenue Growth for a Global Security Software Company",
+    description:
+      "Built a lifecycle engine spanning renewals, win-back and cross-sell that lifted repeat-customer conversion up to 30.5% year over year.",
+    pdfUrl: "/case-study-08-lifecycle-digital-revenue-growth.pdf",
+  },
+  {
+    title: "Fractional CMO Acquisition Engines Across Eight Client Engagements",
+    description:
+      "Built acquisition engines from scratch across eight fractional CMO engagements, delivering $2.2M in aggregate incremental revenue.",
+    pdfUrl: "/case-study-09-fractional-cmo-acquisition-engines.pdf",
+  },
+  {
+    title: "Mobile App Growth for a Global Security Software Company",
+    description:
+      "Took a new mobile app past 100,000 downloads in three months while building a 50K+ subscriber email audience alongside it.",
+    pdfUrl: "/case-study-10-mobile-app-growth.pdf",
+  },
+  {
+    title: "E-commerce Expansion Through Resellers and Marketplaces",
+    description:
+      "Expanded digital commerce by onboarding 50+ online resellers and marketplace partnerships, growing online sales 33% year over year.",
+    pdfUrl: "/case-study-11-ecommerce-resellers-marketplaces.pdf",
+  },
+  {
+    title: "Loyalty and SEO Growth for a Mobility Technology Company",
+    description:
+      "Combined loyalty, partner engagement and SEO across a multi-site travel portfolio, lifting repeat conversion up to 30.5% year over year.",
+    pdfUrl: "/case-study-12-loyalty-seo-growth.pdf",
+  },
+  {
+    title: "Local Digital Sales Growth for a Multi-unit Food Business",
+    description:
+      "Used grassroots marketing and process improvement to grow outside sales more than 100% within six months across a multi-unit food business.",
+    pdfUrl: "/case-study-13-local-digital-sales-growth.pdf",
+  },
+  {
+    title: "International Demand Generation for a Global Cloud Solutions Provider",
+    description:
+      "Aligned solution architects, content and sales around persona-led messaging to take a technical cloud portfolio to market across India, the US and the UK.",
+    pdfUrl: "/case-study-14-international-demand-generation.pdf",
+  },
+  {
+    title: "US E-commerce Lead Generation for a Software Services Company",
+    description:
+      "Built a consultative business-development motion to generate qualified US e-commerce prospects through research-led discovery and follow-up.",
+    pdfUrl: "/case-study-15-us-ecommerce-lead-generation.pdf",
   },
 ];
 
