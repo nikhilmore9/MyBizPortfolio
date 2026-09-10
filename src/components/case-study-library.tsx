@@ -1,4 +1,5 @@
-import { Download } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { caseStudyLibrary } from "@/data/content";
@@ -15,7 +16,7 @@ export function CaseStudyLibrary() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {caseStudyLibrary.map((study) => (
             <article
-              key={study.pdfUrl}
+              key={study.slug}
               className="flex flex-col rounded-2xl border border-border bg-surface p-7"
             >
               <h3 className="font-display text-lg font-medium text-text-primary">
@@ -26,14 +27,13 @@ export function CaseStudyLibrary() {
                 {study.description}
               </p>
 
-              <a
-                href={study.pdfUrl}
-                download
+              <Link
+                href={`/case-studies/${study.slug}`}
                 className="mt-6 inline-flex items-center justify-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-text-primary transition-colors hover:border-cyan hover:text-cyan"
               >
-                <Download className="h-4 w-4" aria-hidden="true" />
-                Download the case study
-              </a>
+                View the case study
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
             </article>
           ))}
         </div>
