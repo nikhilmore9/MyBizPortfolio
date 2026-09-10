@@ -10,11 +10,12 @@ export const personal = {
 };
 
 export const navLinks = [
-  { label: "Impact", href: "#impact" },
-  { label: "Capabilities", href: "#capabilities" },
-  { label: "Experience", href: "#experience" },
-  { label: "Approach", href: "#approach" },
-  { label: "Contact", href: "#contact" },
+  { label: "Impact", href: "/#impact" },
+  { label: "Capabilities", href: "/#capabilities" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Approach", href: "/#approach" },
+  { label: "Things I've Built", href: "/things-i-built" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export type Metric = {
@@ -286,6 +287,68 @@ export const certifications = [
   "Google Analytics Certification",
   "HubSpot Inbound Marketing Certification",
   "LinkedIn Marketing Strategy Certification",
+];
+
+export type FieldNote = {
+  slug: string;
+  tag: string;
+  title: string;
+  tagline: string;
+  intro: string[];
+  layers: { step: string; title: string; description: string }[];
+  stats: { value: string; label: string }[];
+  closing: string;
+  pdfUrl: string;
+  pdfLabel: string;
+};
+
+export const fieldNotes: FieldNote[] = [
+  {
+    slug: "the-battle-card-engine",
+    tag: "Field Note 01",
+    title: "The Battle Card Engine",
+    tagline:
+      "A daily operating system that turns scattered relationship signal into focused human action.",
+    intro: [
+      "Every “AI in sales” post is about writing a better cold email — but that stopped being the bottleneck once everyone had AI drafting outreach. The real bottleneck is earlier: knowing which account is worth a human's time today, before anyone opens a tab to check.",
+      "I built a system around that decision. It maps the account, reads relationship signal across every channel, scores what changed, and produces a practical battle card. The output is never more data — it is a next action.",
+    ],
+    layers: [
+      {
+        step: "01",
+        title: "Discover",
+        description:
+          "Maps the buying committee for every account — decision-makers, influencers and end users — before a single message goes out.",
+      },
+      {
+        step: "02",
+        title: "Listen",
+        description:
+          "Keeps the relationship in one record: email, calls, WhatsApp, intent data and meeting notes, so a signal is never lost just because it happened outside the official channel.",
+      },
+      {
+        step: "03",
+        title: "Prioritise",
+        description:
+          "Scores what changed today and surfaces only the accounts that earned attention — instead of another dashboard to sort through by hand.",
+      },
+      {
+        step: "04",
+        title: "Brief",
+        description:
+          "Hands over a decision, not a dashboard: who to contact, why now, and what to open with.",
+      },
+    ],
+    stats: [
+      { value: "3–5x", label: "More accounts qualified & nurtured per week" },
+      { value: "+35%", label: "Better prospect connect rate" },
+      { value: "~8–10%", label: "Estimated churn reduction over 2.5 months" },
+    ],
+    closing:
+      "“I stopped asking AI to write better emails. I asked it to tell me who to email.” That question — what should I actually work on right now — is the one worth building for.",
+    pdfUrl: "/field-notes/the-battle-card-engine.pdf",
+    pdfLabel: "Download the field note (PDF)",
+  },
 ];
 
 export const linkedInMessage =
