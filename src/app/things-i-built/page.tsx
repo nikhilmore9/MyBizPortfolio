@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { ThingsBuiltShell } from "@/components/things-built-shell";
+import { thingsIBuilt } from "@/data/content";
 
-const title = "Things That I Have Done | Nikhil More";
-const description =
-  "Field notes on AI systems and marketing automation Nikhil More has built — what problem each one replaced, how it works, and what it changed.";
+const title = "Things That I Built — Nikhil More";
+const description = thingsIBuilt.hero.subhead;
 
 export const metadata: Metadata = {
   title,
