@@ -34,13 +34,13 @@ export function Header({ onRequestMeeting }: { onRequestMeeting: () => void }) {
 
         <nav
           aria-label="Primary"
-          className="hidden items-center gap-8 lg:flex"
+          className="hidden items-center gap-5 xl:gap-6 lg:flex"
         >
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary"
+              className="whitespace-nowrap text-[13px] font-medium text-text-secondary transition-colors hover:text-text-primary xl:text-sm"
             >
               {link.label}
             </a>

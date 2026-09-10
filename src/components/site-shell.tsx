@@ -7,6 +7,7 @@ import { ImpactMetrics } from "@/components/impact-metrics";
 import { ProblemSolve } from "@/components/problem-solve";
 import { GrowthSystem } from "@/components/growth-system";
 import { CaseStudies } from "@/components/case-studies";
+import { CaseStudyLibrary } from "@/components/case-study-library";
 import { AiLoop } from "@/components/ai-loop";
 import { ExperienceTimeline } from "@/components/experience-timeline";
 import { About } from "@/components/about";
@@ -28,6 +29,7 @@ export function SiteShell() {
         <ProblemSolve />
         <GrowthSystem />
         <CaseStudies />
+        <CaseStudyLibrary />
         <AiLoop />
         <ExperienceTimeline />
         <About />
