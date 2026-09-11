@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { ThingsBuiltShell } from "@/components/things-built-shell";
-import { thingsIBuilt } from "@/data/content";
+import { inboxAssistant } from "@/data/content";
 
-const title = "Things That I Built — Nikhil More";
-const description = thingsIBuilt.hero.subhead;
+const title = "The Inbox Assistant — Nikhil More";
+const description = inboxAssistant.hero.subhead;
 
 export const metadata: Metadata = {
   title,
@@ -20,6 +20,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ThingsIBuiltPage() {
-  return <ThingsBuiltShell content={thingsIBuilt} />;
+export default function TheInboxAssistantPage() {
+  return <ThingsBuiltShell content={inboxAssistant} />;
 }

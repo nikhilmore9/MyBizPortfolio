@@ -2,10 +2,10 @@ import { ArrowDown, Download, Mail } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { LinkedinIcon } from "@/components/ui/linkedin-icon";
-import { personal, thingsIBuilt } from "@/data/content";
+import { personal, type ThingsIBuiltPage } from "@/data/content";
 
-export function FieldNotes() {
-  const { hero, problem, whatIBuilt, whyThisMatters, whatThisIsnt, closing } = thingsIBuilt;
+export function FieldNotes({ content }: { content: ThingsIBuiltPage }) {
+  const { hero, problem, whatIBuilt, whyThisMatters, whatThisIsnt, closing } = content;
 
   return (
     <>
@@ -100,6 +100,11 @@ export function FieldNotes() {
               <p key={index}>{paragraph}</p>
             ))}
           </div>
+          {whyThisMatters.pullQuote ? (
+            <p className="mt-6 max-w-2xl text-balance font-display text-xl italic leading-snug text-text-primary sm:text-2xl">
+              {whyThisMatters.pullQuote}
+            </p>
+          ) : null}
         </Container>
       </section>
 

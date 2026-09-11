@@ -567,6 +567,7 @@ export type ThingsIBuiltPage = {
     eyebrow: string;
     headline: string;
     body: string[];
+    pullQuote?: string;
   };
   whatThisIsnt: {
     eyebrow: string;
@@ -672,6 +673,79 @@ export const thingsIBuilt: ThingsIBuiltPage = {
     primaryCta: {
       label: "Read the Full Field Note (PDF)",
       href: "/the-battle-card-engine.pdf",
+    },
+  },
+};
+
+export const inboxAssistant: ThingsIBuiltPage = {
+  hero: {
+    eyebrow: "Things That I Built",
+    headline: "[PLACEHOLDER: hero headline — personal frustration → I built my way out of it, applied to email triage]",
+    subhead: "[PLACEHOLDER: hero subhead, same voice/length as the Battle Card Engine's subhead]",
+    primaryCta: {
+      label: "Read the Full Field Note (PDF)",
+      href: "/the-inbox-assistant.pdf",
+    },
+    secondaryCta: {
+      label: "See How It Works",
+      href: "#what-i-built",
+    },
+  },
+  problem: {
+    eyebrow: "The Problem",
+    headline: "[PLACEHOLDER: name the oversaturated take — e.g. everyone already has AI writing email drafts — then pivot to the real bottleneck]",
+    body: [
+      "[PLACEHOLDER: paragraph naming the obvious/oversaturated take on AI + email]",
+      "[PLACEHOLDER: paragraph pivoting to the actual bottleneck this system solves]",
+      "[PLACEHOLDER: paragraph on what you needed instead]",
+    ],
+  },
+  whatIBuilt: {
+    eyebrow: "What I Built",
+    headline: "[PLACEHOLDER: name of the system]",
+    subhead: "[PLACEHOLDER: one-sentence mechanism summary]",
+    intro: "[PLACEHOLDER: intro sentence framing however many layers/steps genuinely describe this system]",
+    layers: [
+      {
+        title: "[PLACEHOLDER: verb-first layer name]",
+        description: "[PLACEHOLDER: replaces this manual habit — does this instead]",
+      },
+    ],
+    stats: [
+      { value: "[STAT]", label: "[PLACEHOLDER: metric label]" },
+      { value: "[STAT]", label: "[PLACEHOLDER: metric label]" },
+      { value: "[STAT]", label: "[PLACEHOLDER: metric label]" },
+    ],
+  },
+  whyThisMatters: {
+    eyebrow: "Why This Is Different",
+    headline: "[PLACEHOLDER: headline, marketer-who-learned-to-build framing]",
+    body: [
+      "[PLACEHOLDER: paragraph on what most “AI-first” positioning skips]",
+      "[PLACEHOLDER: personal-frustration origin story for this system]",
+      "[PLACEHOLDER: proof it generalized beyond personal use, if applicable]",
+    ],
+    pullQuote: "[PLACEHOLDER: one-line italic pull-quote summarizing the system]",
+  },
+  whatThisIsnt: {
+    eyebrow: "What This Isn't",
+    headline: "[PLACEHOLDER: headline framing what this system is and isn't]",
+    intro: "A few things worth saying plainly:",
+    body: [
+      "[PLACEHOLDER: caveat on judgement/human override]",
+      "[PLACEHOLDER: caveat on the numbers being self-tracked]",
+      "[PLACEHOLDER: caveat cross-referencing the Battle Card Engine and the other systems in this series]",
+    ],
+  },
+  closing: {
+    headline: "[PLACEHOLDER: “I stopped asking AI to X. I asked it to Y.” applied to this system]",
+    body: [
+      "[PLACEHOLDER: closing paragraph]",
+      "[PLACEHOLDER: closing paragraph, invitation to compare notes]",
+    ],
+    primaryCta: {
+      label: "Read the Full Field Note (PDF)",
+      href: "/the-inbox-assistant.pdf",
     },
   },
 };
