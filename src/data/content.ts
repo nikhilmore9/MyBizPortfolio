@@ -537,67 +537,218 @@ export const certifications = [
   "LinkedIn Marketing Strategy Certification",
 ];
 
-export type FieldNote = {
-  slug: string;
-  tag: string;
-  title: string;
-  tagline: string;
-  intro: string[];
-  layers: { step: string; title: string; description: string }[];
-  stats: { value: string; label: string }[];
-  closing: string;
-  pdfUrl: string;
-  pdfLabel: string;
+export type ThingsIBuiltCta = {
+  label: string;
+  href: string;
 };
 
-export const fieldNotes: FieldNote[] = [
-  {
-    slug: "the-battle-card-engine",
-    tag: "Field Note 01",
-    title: "The Battle Card Engine",
-    tagline:
-      "A daily operating system that turns scattered relationship signal into focused human action.",
-    intro: [
-      "Every “AI in sales” post is about writing a better cold email — but that stopped being the bottleneck once everyone had AI drafting outreach. The real bottleneck is earlier: knowing which account is worth a human's time today, before anyone opens a tab to check.",
-      "I built a system around that decision. It maps the account, reads relationship signal across every channel, scores what changed, and produces a practical battle card. The output is never more data — it is a next action.",
+export type ThingsIBuiltPage = {
+  hero: {
+    eyebrow: string;
+    headline: string;
+    subhead: string;
+    primaryCta: ThingsIBuiltCta;
+    secondaryCta: ThingsIBuiltCta;
+  };
+  problem: {
+    eyebrow: string;
+    headline: string;
+    body: string[];
+  };
+  whatIBuilt: {
+    eyebrow: string;
+    headline: string;
+    subhead: string;
+    intro: string;
+    layers: { title: string; description: string }[];
+    stats: { value: string; label: string }[];
+  };
+  whyThisMatters: {
+    eyebrow: string;
+    headline: string;
+    body: string[];
+    pullQuote?: string;
+  };
+  whatThisIsnt: {
+    eyebrow: string;
+    headline: string;
+    intro: string;
+    body: string[];
+  };
+  closing: {
+    headline: string;
+    body: string[];
+    primaryCta: ThingsIBuiltCta;
+  };
+};
+
+export const thingsIBuilt: ThingsIBuiltPage = {
+  hero: {
+    eyebrow: "Things That I Built",
+    headline:
+      "I got tired of doing the same manual decision 40 times. So I built my way out of it.",
+    subhead:
+      "Not a case study. Not a client deliverable. This is the system running on my own pipeline, right now, that decides which prospects deserve my attention today — before I've even opened my laptop.",
+    primaryCta: {
+      label: "Read the Full Field Note (PDF)",
+      href: "/the-battle-card-engine.pdf",
+    },
+    secondaryCta: {
+      label: "See How It Works",
+      href: "#what-i-built",
+    },
+  },
+  problem: {
+    eyebrow: "The Problem",
+    headline:
+      "Every “AI in sales” post is about writing a better cold email. That's not the bottleneck anymore.",
+    body: [
+      "Everyone has AI drafting outreach now. That race is over, and it was never the hard part.",
+      "The real bottleneck is earlier: knowing which account is worth a human's time today — before anyone opens a tab to check. With 200 accounts in motion and signal scattered across email, calls, WhatsApp, and meeting notes, that question doesn't get easier with more data. It gets harder. More data just means a bigger pile to sift through by hand every single morning.",
+      "I didn't need another tool that helps me write faster. I needed something that tells me where to point my attention before I write anything at all.",
     ],
+  },
+  whatIBuilt: {
+    eyebrow: "What I Built",
+    headline: "The Battle Card Engine",
+    subhead:
+      "A system that maps my accounts, listens across every channel a relationship actually happens in, scores what changed, and hands me a battle card — every morning, before I've looked at anything.",
+    intro:
+      "It runs on four layers, and each one replaces a specific manual habit I used to repeat by hand, every week, without thinking about it:",
     layers: [
       {
-        step: "01",
-        title: "Discover",
+        title: "It Discovers",
         description:
-          "Maps the buying committee for every account — decision-makers, influencers and end users — before a single message goes out.",
+          "instead of me manually searching LinkedIn and guessing who actually matters at an account, it maps the real buying committee: the decision-maker, the influencer, the economic voice, the end user.",
       },
       {
-        step: "02",
-        title: "Listen",
+        title: "It Listens",
         description:
-          "Keeps the relationship in one record: email, calls, WhatsApp, intent data and meeting notes, so a signal is never lost just because it happened outside the official channel.",
+          "instead of relationship intelligence living in five disconnected places (my inbox, my phone, a WhatsApp thread, my memory), it pulls every signal into one account record, so nothing gets lost just because it happened outside the “official” channel.",
       },
       {
-        step: "03",
-        title: "Prioritise",
+        title: "It Prioritises",
         description:
-          "Scores what changed today and surfaces only the accounts that earned attention — instead of another dashboard to sort through by hand.",
+          "instead of a dashboard full of data I still have to sort through myself, it scores what actually changed today and surfaces only the handful of accounts that earned my attention.",
       },
       {
-        step: "04",
-        title: "Brief",
+        title: "It Briefs",
         description:
-          "Hands over a decision, not a dashboard: who to contact, why now, and what to open with.",
+          "instead of five to ten minutes of re-reading old notes before every call, it hands me a decision: call this account, here's why, here's how to open.",
       },
     ],
     stats: [
-      { value: "3–5x", label: "More accounts qualified & nurtured per week" },
+      { value: "3–5x", label: "More accounts qualified and nurtured per week" },
       { value: "+35%", label: "Better prospect connect rate" },
-      { value: "~8–10%", label: "Estimated churn reduction over 2.5 months" },
+      { value: "~8–10%", label: "Estimated churn reduction over the last 2.5 months" },
     ],
-    closing:
-      "“I stopped asking AI to write better emails. I asked it to tell me who to email.” That question — what should I actually work on right now — is the one worth building for.",
-    pdfUrl: "/field-notes/the-battle-card-engine.pdf",
-    pdfLabel: "Download the field note (PDF)",
   },
-];
+  whyThisMatters: {
+    eyebrow: "Why This Is Different",
+    headline:
+      "I'm not an engineer who learned marketing. I'm a marketer who got tired enough to learn to build.",
+    body: [
+      "19 years of B2B performance marketing taught me exactly which manual decisions are worth automating and which aren't. That's the part most “AI-first” positioning skips — knowing what's actually expensive to do by hand, because you've done it by hand for two decades.",
+      "This system didn't start as a product idea. It started as personal frustration with the fortieth time I did the same research pass on an account. I built the thinnest version that removed the pain, ran it on my own real pipeline first, and only then thought about whether it could be useful to anyone else.",
+      "It has been. I've since adapted a version of this system into a product for a client building CRM tooling for solopreneurs and small teams — proof this wasn't a one-off hack, but a pattern that holds up outside my own inbox too.",
+    ],
+  },
+  whatThisIsnt: {
+    eyebrow: "What This Isn't",
+    headline:
+      "This is a memory layer for my own relationships. Not a surveillance tool. Not magic. Not finished.",
+    intro: "A few things worth saying plainly:",
+    body: [
+      "This captures signal on my own sales conversations, feeding my own follow-up decisions. It's not third-party surveillance, and it doesn't replace judgement — the score is a recommendation, not a verdict. I can accept it, ignore it, or override it, every time.",
+      "The numbers above are self-tracked, not independently audited. I say that because I'd rather you trust a number I can defend than be impressed by one I can't.",
+      "And it isn't the only system I've built this way. The same principle — find the repeat cost, build the thinnest version that removes it, run it on your own work first — is behind an inbox assistant that triages and drafts my email, a research agent that tracks industry trends for me, and a couple of smaller tools besides.",
+    ],
+  },
+  closing: {
+    headline: "I stopped asking AI to write better emails. I asked it to tell me who to email.",
+    body: [
+      "That question — what should I actually work on right now — is the one worth building for. This is one answer to it. It won't be the last system I build to answer it.",
+      "If you're building something similar, or trying to figure out where to start: I'm happy to compare notes.",
+    ],
+    primaryCta: {
+      label: "Read the Full Field Note (PDF)",
+      href: "/the-battle-card-engine.pdf",
+    },
+  },
+};
+
+export const inboxAssistant: ThingsIBuiltPage = {
+  hero: {
+    eyebrow: "Things That I Built",
+    headline: "[PLACEHOLDER: hero headline — personal frustration → I built my way out of it, applied to email triage]",
+    subhead: "[PLACEHOLDER: hero subhead, same voice/length as the Battle Card Engine's subhead]",
+    primaryCta: {
+      label: "Read the Full Field Note (PDF)",
+      href: "/the-inbox-assistant.pdf",
+    },
+    secondaryCta: {
+      label: "See How It Works",
+      href: "#what-i-built",
+    },
+  },
+  problem: {
+    eyebrow: "The Problem",
+    headline: "[PLACEHOLDER: name the oversaturated take — e.g. everyone already has AI writing email drafts — then pivot to the real bottleneck]",
+    body: [
+      "[PLACEHOLDER: paragraph naming the obvious/oversaturated take on AI + email]",
+      "[PLACEHOLDER: paragraph pivoting to the actual bottleneck this system solves]",
+      "[PLACEHOLDER: paragraph on what you needed instead]",
+    ],
+  },
+  whatIBuilt: {
+    eyebrow: "What I Built",
+    headline: "[PLACEHOLDER: name of the system]",
+    subhead: "[PLACEHOLDER: one-sentence mechanism summary]",
+    intro: "[PLACEHOLDER: intro sentence framing however many layers/steps genuinely describe this system]",
+    layers: [
+      {
+        title: "[PLACEHOLDER: verb-first layer name]",
+        description: "[PLACEHOLDER: replaces this manual habit — does this instead]",
+      },
+    ],
+    stats: [
+      { value: "[STAT]", label: "[PLACEHOLDER: metric label]" },
+      { value: "[STAT]", label: "[PLACEHOLDER: metric label]" },
+      { value: "[STAT]", label: "[PLACEHOLDER: metric label]" },
+    ],
+  },
+  whyThisMatters: {
+    eyebrow: "Why This Is Different",
+    headline: "[PLACEHOLDER: headline, marketer-who-learned-to-build framing]",
+    body: [
+      "[PLACEHOLDER: paragraph on what most “AI-first” positioning skips]",
+      "[PLACEHOLDER: personal-frustration origin story for this system]",
+      "[PLACEHOLDER: proof it generalized beyond personal use, if applicable]",
+    ],
+    pullQuote: "[PLACEHOLDER: one-line italic pull-quote summarizing the system]",
+  },
+  whatThisIsnt: {
+    eyebrow: "What This Isn't",
+    headline: "[PLACEHOLDER: headline framing what this system is and isn't]",
+    intro: "A few things worth saying plainly:",
+    body: [
+      "[PLACEHOLDER: caveat on judgement/human override]",
+      "[PLACEHOLDER: caveat on the numbers being self-tracked]",
+      "[PLACEHOLDER: caveat cross-referencing the Battle Card Engine and the other systems in this series]",
+    ],
+  },
+  closing: {
+    headline: "[PLACEHOLDER: “I stopped asking AI to X. I asked it to Y.” applied to this system]",
+    body: [
+      "[PLACEHOLDER: closing paragraph]",
+      "[PLACEHOLDER: closing paragraph, invitation to compare notes]",
+    ],
+    primaryCta: {
+      label: "Read the Full Field Note (PDF)",
+      href: "/the-inbox-assistant.pdf",
+    },
+  },
+};
 
 export const linkedInMessage =
   "Hi Nikhil, I'd like to discuss [my business challenge / an opportunity]. Would you be open to a short conversation this week?";

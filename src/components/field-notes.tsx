@@ -1,82 +1,166 @@
-import { Download } from "lucide-react";
+import { ArrowDown, Download, Mail } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { fieldNotes } from "@/data/content";
+import { LinkedinIcon } from "@/components/ui/linkedin-icon";
+import { personal, type ThingsIBuiltPage } from "@/data/content";
 
-export function FieldNotes() {
+export function FieldNotes({ content }: { content: ThingsIBuiltPage }) {
+  const { hero, problem, whatIBuilt, whyThisMatters, whatThisIsnt, closing } = content;
+
   return (
-    <section className="py-20 sm:py-28">
-      <Container>
-        <SectionHeading
-          eyebrow="Things That I Have Done"
-          title="Systems I've built, written up in plain language."
-          description="Short field notes on tools and workflows I've built to solve a real, repeated problem — what it replaced, how it works, and what it changed."
-        />
+    <>
+      <section className="border-b border-border py-20 sm:py-28">
+        <Container>
+          <p className="font-mono text-xs font-medium uppercase tracking-[0.25em] text-cyan">
+            {hero.eyebrow}
+          </p>
+          <h1 className="mt-5 max-w-3xl text-balance font-display text-4xl font-medium leading-[1.08] tracking-tight text-text-primary sm:text-5xl">
+            {hero.headline}
+          </h1>
+          <p className="mt-6 max-w-2xl text-balance text-base leading-relaxed text-text-secondary sm:text-lg">
+            {hero.subhead}
+          </p>
 
-        <div className="mt-14 space-y-16">
-          {fieldNotes.map((note) => (
-            <article
-              key={note.slug}
-              className="rounded-2xl border border-border bg-surface p-7 sm:p-10"
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a
+              href={hero.primaryCta.href}
+              download
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-text-primary px-6 py-3.5 text-sm font-semibold text-background transition-opacity hover:opacity-85"
             >
-              <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-cyan">
-                {note.tag}
-              </p>
-              <h3 className="mt-3 font-display text-2xl font-medium text-text-primary sm:text-3xl">
-                {note.title}
-              </h3>
-              <p className="mt-3 max-w-2xl text-base leading-relaxed text-text-secondary">
-                {note.tagline}
-              </p>
+              <Download className="h-4 w-4" aria-hidden="true" />
+              {hero.primaryCta.label}
+            </a>
+            <a
+              href={hero.secondaryCta.href}
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-3.5 text-sm font-semibold text-text-primary transition-colors hover:border-cyan hover:text-cyan"
+            >
+              {hero.secondaryCta.label}
+              <ArrowDown className="h-4 w-4" aria-hidden="true" />
+            </a>
+          </div>
+        </Container>
+      </section>
 
-              <div className="mt-6 max-w-2xl space-y-4 text-sm leading-relaxed text-text-secondary">
-                {note.intro.map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
-              </div>
+      <section id="the-problem" className="border-b border-border py-20 sm:py-28">
+        <Container>
+          <SectionHeading eyebrow={problem.eyebrow} title={problem.headline} />
+          <div className="mt-8 max-w-2xl space-y-4 text-base leading-relaxed text-text-secondary">
+            {problem.body.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        </Container>
+      </section>
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {note.layers.map((layer) => (
-                  <div
-                    key={layer.step}
-                    className="rounded-xl border border-border bg-background p-5"
-                  >
-                    <p className="font-mono text-xs text-text-secondary">{layer.step}</p>
-                    <p className="mt-1 font-semibold text-text-primary">{layer.title}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-text-secondary">
-                      {layer.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
+      <section id="what-i-built" className="border-b border-border py-20 sm:py-28">
+        <Container>
+          <SectionHeading
+            eyebrow={whatIBuilt.eyebrow}
+            title={whatIBuilt.headline}
+            description={whatIBuilt.subhead}
+          />
 
-              <div className="mt-8 grid gap-4 border-t border-border pt-8 sm:grid-cols-3">
-                {note.stats.map((stat) => (
-                  <div key={stat.label}>
-                    <p className="font-mono text-2xl font-semibold text-text-primary">
-                      {stat.value}
-                    </p>
-                    <p className="mt-1 text-sm text-text-secondary">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
+          <p className="mt-10 max-w-2xl text-base leading-relaxed text-text-secondary">
+            {whatIBuilt.intro}
+          </p>
 
-              <p className="mt-8 max-w-2xl border-t border-border pt-8 text-base italic leading-relaxed text-text-primary">
-                {note.closing}
-              </p>
-
-              <a
-                href={note.pdfUrl}
-                download
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-text-primary px-5 py-2.5 text-sm font-semibold text-background transition-opacity hover:opacity-85"
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {whatIBuilt.layers.map((layer) => (
+              <div
+                key={layer.title}
+                className="rounded-2xl border border-border bg-surface p-6"
               >
-                <Download className="h-4 w-4" aria-hidden="true" />
-                {note.pdfLabel}
-              </a>
-            </article>
-          ))}
-        </div>
-      </Container>
-    </section>
+                <p className="text-sm leading-relaxed text-text-secondary">
+                  <span className="font-semibold text-text-primary">{layer.title}</span>
+                  {" — "}
+                  {layer.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 grid gap-4 border-t border-border pt-8 sm:grid-cols-3">
+            {whatIBuilt.stats.map((stat) => (
+              <div key={stat.label}>
+                <p className="font-mono text-2xl font-semibold text-text-primary sm:text-3xl">
+                  {stat.value}
+                </p>
+                <p className="mt-1 text-sm text-text-secondary">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section id="why-this-matters" className="border-b border-border py-20 sm:py-28">
+        <Container>
+          <SectionHeading eyebrow={whyThisMatters.eyebrow} title={whyThisMatters.headline} />
+          <div className="mt-8 max-w-2xl space-y-4 text-base leading-relaxed text-text-secondary">
+            {whyThisMatters.body.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+          {whyThisMatters.pullQuote ? (
+            <p className="mt-6 max-w-2xl text-balance font-display text-xl italic leading-snug text-text-primary sm:text-2xl">
+              {whyThisMatters.pullQuote}
+            </p>
+          ) : null}
+        </Container>
+      </section>
+
+      <section id="what-this-isnt" className="border-b border-border py-20 sm:py-28">
+        <Container>
+          <SectionHeading eyebrow={whatThisIsnt.eyebrow} title={whatThisIsnt.headline} />
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-text-secondary">
+            {whatThisIsnt.intro}
+          </p>
+          <div className="mt-4 max-w-2xl space-y-4 text-base leading-relaxed text-text-secondary">
+            {whatThisIsnt.body.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-20 sm:py-28">
+        <Container className="max-w-3xl">
+          <h2 className="text-balance font-display text-3xl font-medium leading-[1.1] tracking-tight text-text-primary sm:text-4xl">
+            {closing.headline}
+          </h2>
+          <div className="mt-6 space-y-4 text-base leading-relaxed text-text-secondary">
+            {closing.body.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a
+              href={closing.primaryCta.href}
+              download
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-text-primary px-6 py-3.5 text-sm font-semibold text-background transition-opacity hover:opacity-85"
+            >
+              <Download className="h-4 w-4" aria-hidden="true" />
+              {closing.primaryCta.label}
+            </a>
+            <a
+              href={personal.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-3.5 text-sm font-semibold text-text-primary transition-colors hover:border-cyan hover:text-cyan"
+            >
+              <LinkedinIcon className="h-4 w-4" />
+              Connect on LinkedIn
+            </a>
+            <a
+              href={`mailto:${personal.email}`}
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-3.5 text-sm font-semibold text-text-primary transition-colors hover:border-cyan hover:text-cyan"
+            >
+              <Mail className="h-4 w-4" aria-hidden="true" />
+              Email Me
+            </a>
+          </div>
+        </Container>
+      </section>
+    </>
   );
 }
