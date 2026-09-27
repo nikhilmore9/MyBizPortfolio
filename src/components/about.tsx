@@ -29,18 +29,20 @@ export function About() {
 
           <div className="mt-6 space-y-5 text-base leading-relaxed text-text-secondary">
             <p>
-              I&rsquo;ve spent 19+ years building marketing systems that connect
-              activity to revenue, across B2B consulting, cybersecurity, cloud,
+              I&rsquo;ve spent 17+ years building marketing systems that connect
+              activity to revenue (22+ years total professional experience),
+              across B2B consulting, cybersecurity, cloud,
               mobility and technology businesses. My work sits at the
               intersection of demand generation, account-based marketing,
               lifecycle automation and applied AI &mdash; I build the operating
               system, not just the campaigns.
             </p>
             <p>
-              At InspireXT, I lead marketing and brand architecture across
-              supply chain and AI consulting practices, running a 47-account
-              ABM programme that has generated $55M+ in pipeline. Earlier, I
-              managed a $4.79M budget at EC-Council, advised founders as an
+              At InspireXT, I led marketing and brand architecture across
+              supply chain and AI consulting practices, owning a 47-account
+              ABM programme that contributed to £55M+ in company-reported
+              pipeline. Earlier, I managed a $4.79M budget at EC-Council,
+              advised founders as an
               independent growth consultant, ran marketing as CMO at ESDS, and
               built the renewal and lifecycle engine at Quick Heal. Each role
               has sharpened the same discipline: diagnose the commercial

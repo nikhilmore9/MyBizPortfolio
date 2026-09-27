@@ -31,19 +31,19 @@ export type Metric = {
 export const metrics: Metric[] = [
   {
     value: 55,
-    prefix: "$",
+    prefix: "£",
     suffix: "M+",
     label: "Sales-qualified pipeline",
     context:
-      "Generated in 18 months at InspireXT through automated demand-generation frameworks.",
+      "Company-reported combined sourced and influenced pipeline over 31 months at InspireXT.",
   },
   {
     value: 12,
     prefix: "$",
     suffix: "M",
-    label: "Acquisition scaled at 2.1x ROAS",
+    label: "Acquisition scaled at 2.5x ROAS",
     context:
-      "Grown from $0 across a $4.79M three-year paid and outbound budget at EC-Council.",
+      "Campaign-attributed revenue from a $4.79M, 28-month paid and outbound budget at EC-Council.",
   },
   {
     value: 25,
@@ -61,18 +61,18 @@ export const metrics: Metric[] = [
       "Delivered across eight consulting engagements spanning paid media, SEO, CRO and lifecycle automation.",
   },
   {
-    value: 5,
+    value: 12,
     prefix: "₹",
-    suffix: "Cr+",
-    label: "Retention & expansion revenue",
+    suffix: "Cr",
+    label: "Website renewal revenue",
     context:
-      "Contributed at Quick Heal through renewal, win-back and cross-sell/upsell programmes.",
+      "Generated at Quick Heal in 2016 through license renewal, cart recovery, win-back and customer-assistance campaigns.",
   },
   {
     value: 20,
     suffix: "%",
-    label: "C-suite meeting conversion",
-    context: "Of enterprise ABM targets, across a 47-account programme at InspireXT.",
+    label: "MQL-to-SQL conversion",
+    context: "Of worked MQLs progressed to SQL and completed a demo, across the 47-account ABM programme at InspireXT.",
   },
 ];
 
@@ -107,11 +107,11 @@ export const pillars = [
 export const caseStudies = [
   {
     company: "InspireXT",
-    context: "Supply chain and AI consulting",
+    context: "Supply chain, enterprise technology and AI consulting",
     intervention:
-      "Built an automated demand-generation framework and led a 47-account enterprise ABM programme using LinkedIn Sales Navigator, Apollo.io and ZoomInfo.",
+      "Built an automated demand-generation framework and owned a partner-led, 47-account enterprise ABM programme using LinkedIn Sales Navigator, Apollo.io and ZoomInfo.",
     result:
-      "$55M+ in sales-qualified pipeline within 18 months; 20% of C-suite targets converted into meetings.",
+      "£55M+ in company-reported sales-qualified pipeline over 31 months; 20% of worked MQLs in the account set progressed to SQL and demo.",
     tags: ["Demand Generation", "ABM", "AI-Enabled Marketing Operations"],
   },
   {
@@ -120,7 +120,7 @@ export const caseStudies = [
     intervention:
       "Directed paid and outbound demand generation, buyer-journey mapping, landing-page optimisation and structured A/B testing across programmatic and search channels.",
     result:
-      "$4.79M three-year budget managed; acquisition scaled from $0 to $12M at 2.1x ROAS; CAC reduced 25%, from $340 to $255.",
+      "$4.79M managed over 28 months; $12M in campaign-attributed revenue at 2.5x ROAS on media spend; CAC reduced 25%, from $340 to $255.",
     tags: ["Performance Marketing", "Programmatic", "CRO", "Attribution"],
   },
   {
@@ -129,7 +129,7 @@ export const caseStudies = [
     intervention:
       "Built and ran license-renewal, cart-abandonment recovery, win-back, cross-sell and upsell programmes across HubSpot, Marketo, Zoho and Salesforce Marketing Cloud.",
     result:
-      "₹5Cr+ (~$600K) in renewal, retention and cross-sell/upsell revenue; repeat customer conversions up 30.5% year over year.",
+      "₹12Cr in website renewal revenue in 2016; repeat customer conversions up 30.5% year over year.",
     tags: ["Lifecycle Marketing", "Automation", "CRM", "Retention"],
   },
 ];
@@ -157,12 +157,12 @@ export const caseStudyLibrary: CaseStudyDownload[] = [
     org: "Global supply chain consultancy",
     period: "Sep 2023 – Apr 2026",
     description:
-      "Built a 47-account enterprise ABM motion for a global supply chain consultancy, converting 20% of targeted C-suite contacts into meetings.",
+      "Owned a partner-led, 47-account enterprise ABM motion for a global supply chain consultancy, with 20% of worked MQLs in the account set progressing to SQL and demo.",
     summary:
       "The work built a focused enterprise account-based marketing motion for a global supply chain and AI consultancy. Instead of treating every account equally, the programme introduced account prioritisation, buyer research, personalised messaging and coordinated sales follow-up across a 47-account universe, creating a shared operating rhythm between marketing and sales.",
     metrics: [
       { label: "Priority accounts", value: "47" },
-      { label: "C-suite conversion", value: "20%" },
+      { label: "MQL-to-SQL + demo", value: "20%" },
     ],
     pdfUrl: "/case-study-01-enterprise-abm-supply-chain.pdf",
   },
@@ -172,11 +172,11 @@ export const caseStudyLibrary: CaseStudyDownload[] = [
     org: "Global supply chain consultancy",
     period: "Sep 2023 – Apr 2026",
     description:
-      "Connected paid media with content, events, SEO and sales follow-up into one demand engine, contributing to $55M+ in sales-qualified pipeline.",
+      "Connected paid media with content, events, SEO and sales follow-up into one demand engine, contributing to £55M+ in company-reported sales-qualified pipeline.",
     summary:
       "The work connected paid campaigns with content, events, website, SEO, marketing automation and sales follow-up into one measurable demand engine, moving paid media from an isolated acquisition channel to one component of a broader, trackable pipeline system.",
     metrics: [
-      { label: "Sales-qualified pipeline", value: "$55M+" },
+      { label: "Sales-qualified pipeline", value: "£55M+" },
       { label: "Attributed revenue growth", value: "+18% YoY" },
     ],
     pdfUrl: "/case-study-02-paid-demand-generation-supply-chain.pdf",
@@ -217,14 +217,13 @@ export const caseStudyLibrary: CaseStudyDownload[] = [
     org: "Global technology company (cybersecurity education & certification)",
     period: "May 2021 – Sep 2023",
     description:
-      "Managed a $4.79M three-year paid and outbound budget, scaling acquisition from $0 to $12M at 2.1x ROAS with a sub-18-month payback.",
+      "Managed $4.79M in paid-media spend over 28 months, generating $12M in campaign-attributed revenue at 2.5x ROAS, excluding agency fees.",
     summary:
-      "The work managed a $4.79M three-year paid and outbound demand-generation budget, connecting search, social and programmatic media with landing pages, email, automation and sales follow-up, scaling acquisition from a standing start into a measurable, disciplined system.",
+      "The work managed $4.79M in paid-media spend over 28 months, connecting search, social and programmatic media with landing pages, email, automation and sales follow-up, scaling acquisition into a measurable, disciplined system tracked through multi-touch attribution.",
     metrics: [
-      { label: "Budget managed", value: "$4.79M / 3 yrs" },
-      { label: "Acquisition scaled", value: "$0 → $12M" },
-      { label: "ROAS", value: "2.1x" },
-      { label: "Payback", value: "<18 months" },
+      { label: "Media spend", value: "$4.79M / 28 mo" },
+      { label: "Attributed revenue", value: "$12M" },
+      { label: "ROAS", value: "2.5x" },
     ],
     pdfUrl: "/case-study-05-scaling-paid-acquisition.pdf",
   },
@@ -269,7 +268,7 @@ export const caseStudyLibrary: CaseStudyDownload[] = [
       "The work built a lifecycle engine integrating acquisition, license renewal, cart-abandonment recovery, win-back, cross-sell and upsell across email, SMS and social, turning the existing customer base into a growth asset.",
     metrics: [
       { label: "Repeat conversions", value: "up to +30.5% YoY" },
-      { label: "Renewal/retention revenue", value: "₹5Cr+" },
+      { label: "Website renewal revenue (2016)", value: "₹12Cr" },
       { label: "Digital revenue growth", value: "1.8x / 2 yrs" },
     ],
     pdfUrl: "/case-study-08-lifecycle-digital-revenue-growth.pdf",
@@ -282,10 +281,10 @@ export const caseStudyLibrary: CaseStudyDownload[] = [
     description:
       "Built acquisition engines from scratch across eight fractional CMO engagements, delivering $2.2M in aggregate incremental revenue.",
     summary:
-      "Across eight fractional CMO engagements, the work built acquisition engines from scratch, integrating paid media infrastructure, conversion-funnel optimisation, lifecycle automation and attribution frameworks tailored to each client's stage and economics.",
+      "Across eight confidential B2B growth engagements, the work built acquisition engines from scratch, integrating paid media infrastructure, conversion-funnel optimisation, lifecycle automation and attribution frameworks tailored to each client's stage and economics.",
     metrics: [
       { label: "Incremental revenue", value: "$2.2M" },
-      { label: "Qualified lead volume", value: "+27% aggregate" },
+      { label: "Conversion rate lift", value: "+18% avg" },
       { label: "Programmatic ROAS", value: "2.4x" },
     ],
     pdfUrl: "/case-study-09-fractional-cmo-acquisition-engines.pdf",
@@ -417,11 +416,13 @@ export const experience: ExperienceEntry[] = [
     company: "InspireXT",
     role: "Senior Marketing Manager",
     dates: "Sep 2023 – Apr 2026",
-    context: "Supply chain and AI consulting",
+    context: "Supply chain, enterprise technology and AI consulting",
     highlights: [
-      "Built automated demand-generation frameworks that generated $55M+ in sales-qualified pipeline in 18 months.",
-      "Led a 47-account enterprise ABM programme using LinkedIn Sales Navigator, Apollo.io and ZoomInfo; converted 20% of C-suite targets into meetings.",
-      "Drove an 18% year-over-year increase in attributed revenue and a 45% increase in brand visibility through content-led storytelling and AI-enabled marketing operations.",
+      "Contributed to £55M+ in company-reported combined sourced and influenced sales-qualified pipeline over 31 months, across Oracle, Salesforce and consulting campaigns.",
+      "Owned a partner-led, 47-account enterprise ABM programme using LinkedIn Sales Navigator, Apollo.io and ZoomInfo, from account research through sales handoff; 20% of worked MQLs in the account set progressed to SQL and demo.",
+      "Ran a separate top-of-funnel motion sustaining ~100 MQLs/month across global consulting practices; trailing MQL-to-SQL conversion improved 27% as scoring and routing matured.",
+      "Directed channel, agency and tool allocation against a budget that scaled to approximately ₹35 lakh, managing six direct reports and two specialist agencies.",
+      "Improved organic visibility for the targeted keyword set by 45% through focused on-page and off-page SEO, contributing to an 18% year-over-year increase in attributed revenue.",
     ],
   },
   {
@@ -430,20 +431,21 @@ export const experience: ExperienceEntry[] = [
     dates: "May 2021 – Sep 2023",
     context: "Cybersecurity education and certification",
     highlights: [
-      "Managed a $4.79M three-year paid and outbound demand-generation budget; scaled acquisition from $0 to $12M at 2.1x ROAS with a sub-18-month payback period.",
-      "Reduced customer acquisition cost 25%, from $340 to $255, by improving channel mix, audience targeting and funnel performance.",
-      "Used programmatic display channels, including DV360 and The Trade Desk, alongside paid media, email marketing and landing-page testing.",
+      "Managed $4.79M in paid-media spend over 28 months across Google, Meta, LinkedIn, YouTube, display and programmatic campaigns for global certification and Cyber Range offerings.",
+      "Generated $12M in campaign-attributed revenue through multi-touch attribution — 2.5x ROAS on media spend, excluding agency fees.",
+      "Reduced media-only CAC 25%, from $340 to $255 per paid certification-seat purchase, across the multi-channel portfolio.",
+      "Reworked retargeting around top-of-funnel educational content and tracked multi-touch journeys from first ad interaction through purchase and renewal — some purchases closed up to 18 months after first touch.",
     ],
   },
   {
     company: "Independent Practice",
-    role: "Strategic Marketing Consultant & Growth Advisor",
+    role: "Demand Generation Architect & Fractional Marketing Leader",
     dates: "May 2018 – May 2021",
-    context: "Growth advisory and fractional marketing leadership",
+    context: "Eight confidential B2B growth engagements",
     highlights: [
-      "Delivered $2.2M in incremental revenue across eight consulting engagements spanning paid media, SEO, CRO, lifecycle automation and attribution.",
-      "Increased qualified lead volume 27% across clients; increased organic visibility by an average of 33% and delivered 2.4x ROAS through programmatic display.",
-      "Led 12 website redesign and optimisation projects, improving average conversion rates 18%.",
+      "Delivered $2.2M in campaign-attributed client revenue across eight confidential B2B growth engagements spanning paid media, SEO, CRO, lifecycle automation and attribution.",
+      "Delivered 2.4x attributed revenue-to-media-spend ROAS on The Trade Desk and DV360, tracked through client CRM and conversion analytics.",
+      "Optimised 12 client websites by reducing high-intent forms from 7+ fields to 3–4 and adding Apollo, Clearbit and ZoomInfo enrichment to HubSpot/Zoho; conversion rates rose an average 18% across engagements while sales acceptance held stable.",
     ],
   },
   {
@@ -452,19 +454,31 @@ export const experience: ExperienceEntry[] = [
     dates: "Mar 2017 – Mar 2018",
     context: "Cloud infrastructure and data centre services",
     highlights: [
-      "Directed an 8-to-20-person marketing team across India, the United States and the United Kingdom.",
-      "Led marketing leadership, demand generation and digital growth initiatives across the organisation's markets.",
-      "Managed cross-functional teams and agencies across paid media, performance marketing, SEO, design and marketing operations.",
+      "Led global marketing strategy across India, the US and the UK for cloud, datacentre and managed-services lines; coordinated OEM alliances and Marketing Development Funds.",
+      "Built digital assets and multi-channel campaign activity that supported a $15M enterprise sales pipeline across cloud and datacentre solution lines.",
+      "Scaled the marketing team from eight to more than 20 through hiring and restructuring across product marketing, content, design/UX, video, technical writing, paid media, SEO, email, campaign execution and BDR operations.",
+      "Directed global resource allocation and agency delivery using agile sprint rhythms aligned to enterprise pipeline priorities.",
+    ],
+  },
+  {
+    company: "Prasanna Purple Mobility Solutions Pvt. Ltd.",
+    role: "Head of Digital Marketing",
+    dates: "Feb 2016 – Feb 2017",
+    context: "Mobility and travel",
+    highlights: [
+      "Led digital acquisition, campaign planning, partner programmes and online visibility across the business.",
     ],
   },
   {
     company: "Quick Heal Technologies Pvt. Ltd.",
     role: "Manager, Online Marketing",
     dates: "Feb 2011 – Feb 2016",
-    context: "Cybersecurity software",
+    context: "Cybersecurity software and e-commerce",
     highlights: [
-      "Built and ran license-renewal, cart-abandonment recovery and win-back email/SMS campaigns contributing ₹5Cr+ (~$600K) in renewal, retention and cross-sell/upsell revenue.",
-      "Increased repeat customer conversions up to 30.5% year over year; drove 1.8x digital revenue growth for two consecutive years.",
+      "Generated ₹12 crore in website renewal revenue in 2016 through license renewal, cart recovery, win-back email/SMS and customer-assistance campaigns.",
+      "Built the fresh-sales e-commerce channel from a ₹25,000 monthly sales baseline in 2011 to more than ₹5 crore in cumulative new-customer sales over five years.",
+      "Increased repeat customer conversions by a reported 30.5% relative year-over-year lift; drove 1.8x digital revenue growth for two consecutive years.",
+      "Expanded online marketing from a solo role to a 28-person function: 13 direct reports and 15 dotted-line reportees across content, creative, SEO, campaigns, email and retention.",
       "Improved SEO performance, increasing unique organic users 12.6%, page views 21% and average time on site 39%.",
     ],
   },
@@ -472,14 +486,9 @@ export const experience: ExperienceEntry[] = [
 
 export const earlierExperience = [
   {
-    role: "Head of Digital Marketing",
-    company: "Prasanna Purple Mobility Solutions Pvt. Ltd.",
-    dates: "Feb 2016 – Feb 2017",
-  },
-  {
     role: "Marketing Manager",
     company: "Rigel Networks LLC",
-    dates: "Jun 2010 – Apr 2011",
+    dates: "Jun 2010 – Jan 2011",
   },
   {
     role: "Internet Marketing Expert",
@@ -506,18 +515,34 @@ export const earlierExperience = [
 export const capabilities = [
   "Google Ads",
   "LinkedIn Ads",
+  "Meta Ads",
+  "YouTube Ads",
   "DV360",
   "The Trade Desk",
   "HubSpot",
   "Marketo",
   "Salesforce",
-  "Zoho",
+  "Salesforce Marketing Cloud",
+  "Zoho CRM",
+  "Zoho Marketing Automation",
+  "Zapier",
   "GA4",
+  "Google Search Console",
   "Adobe Analytics",
-  "6sense",
+  "Looker Studio",
+  "Ahrefs",
+  "SEMrush",
   "Apollo.io",
   "ZoomInfo",
   "n8n",
+  "LiteLLM",
+  "Firecrawl",
+  "Retell AI",
+  "Next.js",
+  "TypeScript",
+  "Supabase",
+  "PostgreSQL",
+  "Vercel",
   "AI Agents",
   "RAG Workflows",
 ];
@@ -530,11 +555,18 @@ export const education = [
 export const certifications = [
   "NSDC-Certified AI Generalist",
   "Google AI Essentials",
+  "Google AI-Powered Performance Ads Certification",
   "Google Ads Search Certification",
   "Google Ads Display Certification",
   "Google Analytics Certification",
   "HubSpot Inbound Marketing Certification",
+  "HubSpot Content Marketing Certification",
+  "HubSpot Social Media Certification",
   "LinkedIn Marketing Strategy Certification",
+  "LinkedIn Advertising Fundamentals Certification",
+  "LinkedIn Marketing Measurement Certification",
+  "The Trade Desk Marketing Essentials Certification",
+  "IIM Bangalore Marketing 5.0 Certification (in progress)",
 ];
 
 export type ThingsIBuiltCta = {
@@ -638,9 +670,9 @@ export const thingsIBuilt: ThingsIBuiltPage = {
       },
     ],
     stats: [
-      { value: "3–5x", label: "More accounts qualified and nurtured per week" },
-      { value: "+35%", label: "Better prospect connect rate" },
-      { value: "~8–10%", label: "Estimated churn reduction over the last 2.5 months" },
+      { value: "3–5x", label: "More accounts qualified per week than manual research" },
+      { value: "+35%", label: "Higher email/LinkedIn response and engagement vs. static sequences" },
+      { value: "20+ hrs", label: "Saved per week, self-tracked over ~2.5 months" },
     ],
   },
   whyThisMatters: {
@@ -648,9 +680,9 @@ export const thingsIBuilt: ThingsIBuiltPage = {
     headline:
       "I'm not an engineer who learned marketing. I'm a marketer who got tired enough to learn to build.",
     body: [
-      "19 years of B2B performance marketing taught me exactly which manual decisions are worth automating and which aren't. That's the part most “AI-first” positioning skips — knowing what's actually expensive to do by hand, because you've done it by hand for two decades.",
+      "17+ years of B2B performance marketing taught me exactly which manual decisions are worth automating and which aren't. That's the part most “AI-first” positioning skips — knowing what's actually expensive to do by hand, because you've done it by hand for nearly two decades.",
       "This system didn't start as a product idea. It started as personal frustration with the fortieth time I did the same research pass on an account. I built the thinnest version that removed the pain, ran it on my own real pipeline first, and only then thought about whether it could be useful to anyone else.",
-      "It has been. I've since adapted a version of this system into a product for a client building CRM tooling for solopreneurs and small teams — proof this wasn't a one-off hack, but a pattern that holds up outside my own inbox too.",
+      "It has been. I've since built SmartFollow AI, a workspace-scoped CRM product with AI summaries and source-linked Q&A, carrying the same approval gates, source links and quarantine workflows over to outbound messages, CRM changes and publishing. It's in private staging now, with a small pilot planned — proof this wasn't a one-off hack, but a pattern that holds up outside my own inbox too.",
     ],
   },
   whatThisIsnt: {
